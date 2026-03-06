@@ -13,7 +13,7 @@ services:
       retries: 5
 
   airflow-init:
-    image: apache/airflow:2.8.1
+    build: .
     depends_on:
       postgres:
         condition: service_healthy
@@ -30,7 +30,7 @@ services:
       - ./airflow/plugins:/opt/airflow/plugins
 
   airflow-scheduler:
-    image: apache/airflow:2.8.1
+    build: .
     depends_on:
       postgres:
         condition: service_healthy
@@ -48,7 +48,7 @@ services:
       - ./data:/opt/data
 
   airflow-webserver:
-    image: apache/airflow:2.8.1
+    build: .
     depends_on:
       postgres:
         condition: service_healthy
