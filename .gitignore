@@ -6,3 +6,5 @@ __pycache__/
 .venv/
 target/
 dbt/logs/
+dbt/dbt_packages/
+dbt/target/
