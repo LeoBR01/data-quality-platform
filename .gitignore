@@ -1,10 +1,16 @@
 .env
+.env.*
+*.env
+*secret*
+*api_key*
 data/
 airflow/logs/
 __pycache__/
 *.pyc
+*.pyo
 .venv/
 target/
 dbt/logs/
 dbt/dbt_packages/
 dbt/target/
+uv.lock
